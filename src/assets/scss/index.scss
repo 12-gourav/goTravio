@@ -90,6 +90,7 @@ section.banner {
           background: transparent;
           outline: none;
           background: #ffffff5e;
+          min-width: 100%;
         }
       }
       .form_group2 {
@@ -736,6 +737,7 @@ section.feedback {
         padding: 0 1rem;
         height: 35px;
         outline: none;
+        min-width: 100%;
       }
     }
     .form_group2{

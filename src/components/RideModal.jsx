@@ -67,6 +67,7 @@ Thank you.
       const message = buildWhatsAppMessage();
       const WHATSAPP_NUMBER = import.meta.env.VITE_PHONE;
 
+      
       openWhatsApp(WHATSAPP_NUMBER, message);
     } catch (error) {
       console.log(error);
