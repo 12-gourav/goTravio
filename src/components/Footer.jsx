@@ -23,7 +23,7 @@ const Footer = () => {
         <a href="#">
           <i className="bx bxl-instagram"></i>Instagram
         </a>
-        <a href="#">
+        <a href="https://youtube.com/@fasttravio?si=N3E3YuwUj-C9gY-w">
           <i className="bx bxl-youtube"></i>Youtube
         </a>
         <a href="#">
