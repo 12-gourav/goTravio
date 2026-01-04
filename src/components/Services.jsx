@@ -1,6 +1,76 @@
-import img from "../assets/banner.jpg";
+import img1 from "../assets/s1.jpg";
+import img2 from "../assets/s2.jpg";
+import img3 from "../assets/s3.jpg";
+import img4 from "../assets/s4.jpg";
+import img5 from "../assets/s5.jpg";
+import { motion } from "framer-motion";
+
+const services = [
+  {
+    img: img1,
+    title: "Elegant Rides for Your Special Day",
+    desc: "Arrive in style with premium, chauffeur-driven cars designed to make your wedding unforgettable.",
+    x: -100,
+  },
+  {
+    img: img2,
+    title: "Seamless Airport Transfers",
+    desc: "On-time pickups and drop-offs with comfort, reliability, and zero travel stress.",
+    x: 100,
+  },
+  {
+    img: img3,
+    title: "Professional Travel for Business Excellence",
+    desc: "Reliable, executive-class transportation tailored for meetings, conferences, and corporate travel.",
+    x: -100,
+  },
+  {
+    img: img4,
+    title: "Comfortable Journeys for Long-Distance Travel",
+    desc: "Explore more with spacious, well-maintained vehicles built for long tours and memorable road trips.",
+    x: 100,
+  },
+  {
+    img: img5,
+    title: "Comfortable Journeys for Long-Distance Travel",
+    desc: "Explore more with spacious, well-maintained vehicles built for long tours and memorable road trips.",
+    x: -100,
+  },
+];
 
 const Services = () => {
+  const buildServiceMessage = (serviceTitle) => {
+    return `
+👋 Hello GoTavio Team,
+
+I’m interested in your *${serviceTitle}* service.
+
+Please share:
+• Availability
+• Pricing details
+• Vehicle options
+
+Looking forward to your response.
+Thank you!
+`;
+  };
+
+  const openWhatsApp = (phone, message) => {
+    const encodedMessage = encodeURIComponent(message);
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    const url = isMobile
+      ? `https://wa.me/${phone}?text=${encodedMessage}`
+      : `https://web.whatsapp.com/send?phone=${phone}&text=${encodedMessage}`;
+
+    window.open(url, "_blank");
+  };
+
+  const handleServiceConnect = (serviceTitle) => {
+    const message = buildServiceMessage(serviceTitle);
+    openWhatsApp(import.meta.env.VITE_PHONE, message);
+  };
+
   return (
     <section className="services">
       <h1>Services</h1>
@@ -11,59 +81,31 @@ const Services = () => {
         vehicles and professional drivers ensure a smooth, safe, and enjoyable
         experience every time.
       </p>
+
       <div className="wrapper">
-        <div className="card">
-          <div className="left">
-            <img src={img} />
-          </div>
-          <div className="right">
-            <h2>Elegant Rides for Your Special Day</h2>
-            <p>
-              Arrive in style with premium, chauffeur-driven cars designed to
-              make your wedding unforgettable.
-            </p>
-            <button><i className='bx bxl-whatsapp'></i>Connect</button>
-          </div>
-        </div>
-        <div className="card">
-          <div className="left">
-            <img src={img} />
-          </div>
-          <div className="right">
-            <h2>Seamless Airport Transfers</h2>
-            <p>
-              On-time pickups and drop-offs with comfort, reliability, and zero
-              travel stress.
-            </p>
-             <button><i className='bx bxl-whatsapp'></i>Connect</button>
-          </div>
-        </div>
-        <div className="card">
-          <div className="left">
-            <img src={img} />
-          </div>
-          <div className="right">
-            <h2>Professional Travel for Business Excellence</h2>
-            <p>
-              Reliable, executive-class transportation tailored for meetings,
-              conferences, and corporate travel.
-            </p>
-             <button><i className='bx bxl-whatsapp'></i>Connect</button>
-          </div>
-        </div>
-        <div className="card">
-          <div className="left">
-            <img src={img} />
-          </div>
-          <div className="right">
-            <h2>Comfortable Journeys for Long-Distance Travel</h2>
-            <p>
-              Explore more with spacious, well-maintained vehicles built for
-              long tours and memorable road trips.
-            </p>
-             <button><i className='bx bxl-whatsapp'></i>Connect</button>
-          </div>
-        </div>
+        {services.map((service, index) => (
+          <motion.div
+            initial={{ x: service.x, scale: 0 }}
+            whileInView={{ x: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0 }}
+            transition={{ type: "tween", duration: 0.8 }}
+            className="card"
+            key={index}
+          >
+            <div className="left">
+              <img src={service.img} alt={service.title} />
+            </div>
+
+            <div className="right">
+              <h2>{service.title}</h2>
+              <p>{service.desc}</p>
+              <button onClick={() => handleServiceConnect(service.title)}>
+                <i className="bx bxl-whatsapp"></i>
+                Connect
+              </button>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </section>
   );

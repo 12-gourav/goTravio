@@ -1,4 +1,4 @@
-import React from "react";
+import {motion} from "framer-motion"
 
 const Why = () => {
   return (
@@ -10,7 +10,13 @@ const Why = () => {
         satisfaction, we ensure every journey is smooth and memorable.
       </p>
       <div className="wrapper">
-        <div className="card">
+           <motion.div
+            initial={{ x: -100, scale: 0 }}
+            whileInView={{ x: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0 }}
+            transition={{ type: "tween", duration: 0.8 }}
+            className="card"
+          >
           <div className="icon">
             <i className="bx bxs-paint"></i>
           </div>
@@ -19,8 +25,14 @@ const Why = () => {
             Our vehicles are regularly serviced and thoroughly cleaned to ensure
             safety, comfort, and a premium travel experience.
           </p>
-        </div>
-        <div className="card1">
+        </motion.div>
+        <motion.div
+            initial={{ x: 100, scale: 0 }}
+            whileInView={{ x: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0 }}
+            transition={{ type: "tween", duration: 0.8 }}
+            className="card1"
+          >
           <div className="icon">
             <i className="bx bx-time-five"></i>
           </div>
@@ -29,8 +41,14 @@ const Why = () => {
             We value your time. Our drivers and services are always punctual,
             ensuring stress-free pickups and timely arrivals.
           </p>
-        </div>
-        <div className="card">
+        </motion.div>
+          <motion.div
+            initial={{ x: -100, scale: 0 }}
+            whileInView={{ x: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0 }}
+            transition={{ type: "tween", duration: 0.8 }}
+            className="card"
+          >
           <div className="icon">
             <i className="bx bxl-flutter"></i>
           </div>
@@ -39,8 +57,14 @@ const Why = () => {
             Our experienced and courteous drivers are trained to provide safe,
             comfortable, and professional service throughout your journey.
           </p>
-        </div>
-        <div className="card1">
+        </motion.div>
+        <motion.div
+            initial={{ x: 100, scale: 0 }}
+            whileInView={{ x: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0 }}
+            transition={{ type: "tween", duration: 0.8 }}
+            className="card1"
+          >
           <div className="icon">
             <i className="bx bx-rupee"></i>
           </div>
@@ -49,7 +73,7 @@ const Why = () => {
             Enjoy clear and honest pricing with no hidden charges, giving you
             complete peace of mind while booking.
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

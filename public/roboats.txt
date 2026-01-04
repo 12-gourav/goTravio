@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gotravio.onrender.com/sitemap.xml

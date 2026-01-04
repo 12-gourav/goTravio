@@ -1,13 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import img from "../assets/logo1.png";
 
 const Footer = () => {
   return (
     <footer>
       <div className="col1">
-        <h5>
-          Go<span>Tavio</span>
-        </h5>
+        <img src={img} />
         <p>
           Go<span>Tavio</span> is a modern car rental and travel service
           designed to make every journey comfortable, reliable, and stress-free.
@@ -18,16 +15,23 @@ const Footer = () => {
       </div>
       <div className="col2">
         <h5>Important Links</h5>
-        <Link>Profile</Link>
         <a href="#">Privacy Policy</a>
-        <a>Legal Terms</a>
+        <a href="#">Legal Terms</a>
       </div>
       <div className="col2">
         <h5>Social Links</h5>
-        <a href="#"><i className='bx bxl-instagram' ></i>Instagram</a>
-        <a href="#"><i className='bx bxl-youtube' ></i>Youtube</a>
-        <a href="#"><i className='bx bxl-whatsapp' ></i>Whatsup</a>
-        <a href="#"><i className='bx bxl-facebook'></i>Facebook</a>
+        <a href="#">
+          <i className="bx bxl-instagram"></i>Instagram
+        </a>
+        <a href="#">
+          <i className="bx bxl-youtube"></i>Youtube
+        </a>
+        <a href="#">
+          <i className="bx bxl-whatsapp"></i>Whatsup
+        </a>
+        <a href="#">
+          <i className="bx bxl-facebook"></i>Facebook
+        </a>
       </div>
     </footer>
   );
