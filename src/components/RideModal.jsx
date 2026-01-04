@@ -6,7 +6,6 @@ import toast from "react-hot-toast";
 
 const RideModal = ({ open, setOpen, pickup, drop, pd }) => {
   const [name, setName] = useState("");
-  const [price, setPrice] = useState("");
   const [pickupAddress, setPickupAddress] = useState("");
   const [dropAddress, setDropAddress] = useState("");
   const [pickupTime, setPickupTime] = useState("");
@@ -20,7 +19,6 @@ const RideModal = ({ open, setOpen, pickup, drop, pd }) => {
 🚖 *New Ride Booking Request*
 
 👤 *Passenger Name:* ${name}
-💰 *Expected Price:* ₹${price}
 
 📍 *Pickup Location:* ${pickupAddress}
 📍 *Drop-off Location:* ${dropAddress}
@@ -53,7 +51,6 @@ Thank you.
   const handleSubmit = async () => {
     try {
       if (name === "") return toast.error("Name is required");
-      if (price === "") return toast.error("Price is required");
       if (pickupAddress === "")
         return toast.error("Pickup location is required");
       if (dropAddress === "") return toast.error("Drop location is required");
@@ -117,15 +114,7 @@ Thank you.
               placeholder="Enter your name"
             />
           </div>
-          <div className="form_group">
-            <label>Expected Price</label>
-            <input
-              type="number"
-              value={price}
-              onChange={(e) => setPrice(e.target.value)}
-              placeholder="Enter your expected price"
-            />
-          </div>
+          
         </div>
         <div className="form_wrap">
           <div className="form_group">
