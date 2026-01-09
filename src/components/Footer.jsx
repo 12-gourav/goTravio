@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import img from "../assets/logo1.png";
 
 const Footer = () => {
@@ -15,8 +16,9 @@ const Footer = () => {
       </div>
       <div className="col2">
         <h5>Important Links</h5>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Legal Terms</a>
+         <Link to="/about">About</Link>
+        <Link to="/privacy-policy">Privacy Policy</Link>
+        <Link to="/legal-terms">Legal Terms</Link>
       </div>
       <div className="col2">
         <h5>Social Links</h5>

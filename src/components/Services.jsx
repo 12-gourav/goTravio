@@ -1,8 +1,8 @@
-import img1 from "../assets/s1.jpg";
-import img2 from "../assets/s2.jpg";
-import img3 from "../assets/s3.jpg";
-import img4 from "../assets/s4.jpg";
-import img5 from "../assets/s5.jpg";
+import img1 from "../assets/c1.jpeg";
+import img2 from "../assets/c2.jpeg";
+import img3 from "../assets/c3.jpeg";
+import img4 from "../assets/c4.jpeg";
+import img5 from "../assets/c5.jpeg";
 import { motion } from "framer-motion";
 
 const services = [
