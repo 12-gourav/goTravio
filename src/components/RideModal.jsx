@@ -48,6 +48,20 @@ Thank you.
     window.open(url, "_blank");
   };
 
+
+  const isPastDate = (date) => {
+    if (!date) return false;
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const checkDate = new Date(date);
+    checkDate.setHours(0, 0, 0, 0);
+
+    return checkDate < today;
+  };
+
+
   const handleSubmit = async () => {
     try {
       if (name === "") return toast.error("Name is required");
@@ -58,8 +72,15 @@ Thank you.
       if (pickupDate === "") return toast.error("Pickup date is required");
       if (isReturn === "Yes") {
         if (dropDate === "") return toast.error("Return date is required");
+        if (isPastDate(dropDate))
+          return toast.error("Return date cannot be in the past");
+
+        if (dropDate < pickupDate)
+          return toast.error("Return date cannot be before pickup date");
       }
       if (car === null) return toast.error("Car is required");
+       if (isPastDate(pickupDate))
+        return showError("Pickup date cannot be in the past");
 
       const message = buildWhatsAppMessage();
       const WHATSAPP_NUMBER = import.meta.env.VITE_PHONE;
