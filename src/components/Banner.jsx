@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import img from "../assets/banner.jpg";
+import img from "../assets/bg2.png";
 import logo from "../assets/logo1.png";
 import { useState } from "react";
 import RideModal from "./RideModal";

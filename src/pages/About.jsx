@@ -1,12 +1,24 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import img from "../assets/3d.jpeg";
 import Footer from "../components/Footer";
+import { Breadcrumb } from "antd";
 
 const About = () => {
     const Navigate = useNavigate();
   return (
     <>
         <section className="about">
+          <Breadcrumb style={{fontSize:"0.8rem",marginBottom:"1rem",marginTop:"1rem"}}
+      items={[
+        {
+          title: <Link to={"/"}>Back to Home</Link>,
+        },
+        {
+          title:"About"
+        }
+        
+      ]}
+    />
       <h2>About<span onClick={()=>Navigate("/")}> GoTravio</span></h2>
       <p>
         Go Travio is a customer-focused travel assistance platform designed to

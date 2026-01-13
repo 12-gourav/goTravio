@@ -27,6 +27,7 @@ section.banner {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: rgba(255, 255, 255, 0.6);
     .navbar {
       width: 100%;
       display: flex;
@@ -62,7 +63,7 @@ section.banner {
       width: calc(100% - 50px);
       height: fit-content;
       min-height: 150px;
-      background: rgba(255, 255, 255, 0.6);
+      background: rgba(0, 0, 0, 0.3);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
       padding: 1rem;
       border-radius: 10px;
@@ -70,7 +71,7 @@ section.banner {
       align-items: center;
       justify-content: center;
       gap: 20px;
-      backdrop-filter: blur(5px);
+      border: 1px solid #e4e4e4;
 
       .form_group {
         width: 100%;
@@ -822,6 +823,10 @@ section.privacy {
     font-size: 1.3rem;
     margin-bottom: 10px;
     font-weight: 600;
+      span {
+      color: #ef3e44;
+      cursor: pointer;
+    }
   }
   h3 {
     color: #000000;
@@ -870,7 +875,6 @@ section.about {
     color: #000000;
     font-size: 1.3rem;
     margin-bottom: 10px;
-    margin-top: 3rem;
     span {
       color: #ef3e44;
       cursor: pointer;
@@ -909,24 +913,24 @@ section.about {
   }
 }
 
-@media(max-width:900px){
-  section.about{
+@media (max-width: 900px) {
+  section.about {
     padding: 10px;
-    img{
+    img {
       object-fit: contain;
     }
   }
 }
 
-@media(max-width:700px){
-  section.about{
+@media (max-width: 700px) {
+  section.about {
     padding: 10px;
-    img{
+    img {
       height: 150px;
       object-fit: contain;
       margin-bottom: 0;
     }
-    h2{
+    h2 {
       margin-top: 1rem;
     }
   }

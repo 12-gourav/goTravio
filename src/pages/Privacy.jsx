@@ -1,9 +1,25 @@
-import React from "react";
+import { Breadcrumb } from "antd";
+import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const Privacy = () => {
   return (
+    <>
+    
+  
     <section className="privacy">
-      <h1>Privacy Policy – Go Travio</h1>
+      <Breadcrumb
+        style={{ fontSize: "0.8rem", marginBottom: "1rem", marginTop: "1rem" }}
+        items={[
+          {
+            title: <Link to={"/"}>Back to Home</Link>,
+          },
+          {
+            title: "Privacy Policy",
+          },
+        ]}
+      />
+      <h1>Privacy Policy –<span> GoTravio</span></h1>
       <p>
         Go Travio (“we”, “our”, “us”) respects your privacy and is committed to
         protecting your personal information. This Privacy Policy explains how
@@ -50,9 +66,12 @@ const Privacy = () => {
       <h3>Contact Us</h3>
       <p>Go Travio Support </p>
       <p>
-        Email:<a href="mailto:gotravio.info@gmail.com"> gotravio.info@gmail.com</a>
+        Email:
+        <a href="mailto:gotravio.info@gmail.com"> gotravio.info@gmail.com</a>
       </p>
     </section>
+    <Footer/>
+    </>
   );
 };
 

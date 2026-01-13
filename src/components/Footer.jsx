@@ -28,7 +28,7 @@ const Footer = () => {
         <a href="https://youtube.com/@fasttravio?si=N3E3YuwUj-C9gY-w">
           <i className="bx bxl-youtube"></i>Youtube
         </a>
-        <a href="#">
+<a href="https://wa.me/919973362424?text=Hello%20I%20want%20to%20book%20a%20cab">
           <i className="bx bxl-whatsapp"></i>Whatsup
         </a>
         <a href="#">

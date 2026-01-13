@@ -1,9 +1,22 @@
+import { Breadcrumb } from "antd";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const TermsAndConditions = () => {
   return (
     <section className="privacy">
-      <h1>Terms & Conditions – Go Travio</h1>
+      <Breadcrumb
+        style={{ fontSize: "0.8rem", marginBottom: "1rem", marginTop: "1rem" }}
+        items={[
+          {
+            title: <Link to={"/"}>Back to Home</Link>,
+          },
+          {
+            title: "Terms & Conditions",
+          },
+        ]}
+      />
+      <h1>Terms & Conditions – <span>GoTravio</span></h1>
 
       <p>
         Welcome to Go Travio. By using our application or services, you agree to
