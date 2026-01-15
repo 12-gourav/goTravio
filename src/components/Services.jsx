@@ -4,6 +4,7 @@ import img3 from "../assets/c3.jpeg";
 import img4 from "../assets/c4.jpeg";
 import img5 from "../assets/c5.jpeg";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 const services = [
   {
@@ -32,8 +33,8 @@ const services = [
   },
   {
     img: img5,
-    title: "Comfortable Journeys for Long-Distance Travel",
-    desc: "Explore more with spacious, well-maintained vehicles built for long tours and memorable road trips.",
+    title: "Convenient Local Cab Booking for Daily Travel",
+    desc: "Book comfortable and reliable cabs for daily city travel and short-distance rides with professional drivers.",
     x: -100,
   },
 ];
@@ -41,7 +42,7 @@ const services = [
 const Services = () => {
   const buildServiceMessage = (serviceTitle) => {
     return `
-👋 Hello GoTavio Team,
+👋 Hello GoTravio Team,
 
 I’m interested in your *${serviceTitle}* service.
 
@@ -72,42 +73,83 @@ Thank you!
   };
 
   return (
-    <section className="services">
-      <h1>Services</h1>
-      <p>
-        We provide reliable, comfortable, and premium car rental services
-        designed to meet every travel need. Whether it’s a special occasion, a
-        business commitment, or a long-distance journey, our well-maintained
-        vehicles and professional drivers ensure a smooth, safe, and enjoyable
-        experience every time.
-      </p>
+    <>
+      {/* ================= SEO TAGS ================= */}
+      <Helmet>
+        <title>
+          Cab Booking & Car Rental Services in India | GoTravio
+        </title>
+        <meta
+          name="description"
+          content="Explore GoTravio’s cab booking and car rental services in India including local daily rides, airport transfers, outstation travel, wedding cars, and corporate transport."
+        />
+        <link rel="canonical" href="https://gotravio.in/services" />
 
-      <div className="wrapper">
-        {services.map((service, index) => (
-          <motion.div
-            initial={{ x: service.x, scale: 0 }}
-            whileInView={{ x: 0, scale: 1 }}
-            viewport={{ once: false, amount: 0 }}
-            transition={{ type: "tween", duration: 0.8 }}
-            className="card"
-            key={index}
-          >
-            <div className="left">
-              <img src={service.img} alt={service.title} />
-            </div>
+        {/* Service Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "OfferCatalog",
+            name: "GoTravio Cab & Car Rental Services",
+            url: "https://gotravio.in",
+            itemListElement: services.map((service, index) => ({
+              "@type": "Offer",
+              position: index + 1,
+              itemOffered: {
+                "@type": "Service",
+                name: service.title,
+                description: service.desc,
+                provider: {
+                  "@type": "Organization",
+                  name: "GoTravio",
+                  url: "https://gotravio.in",
+                },
+              },
+            })),
+          })}
+        </script>
+      </Helmet>
 
-            <div className="right">
-              <h2>{service.title}</h2>
-              <p>{service.desc}</p>
-              <button onClick={() => handleServiceConnect(service.title)}>
-                <i className="bx bxl-whatsapp"></i>
-                Connect
-              </button>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </section>
+      {/* ================= PAGE CONTENT ================= */}
+      <section className="services">
+        {/* H1 – IMPORTANT FOR SEO */}
+        <h1>Our Cab Booking & <span style={{color:"#000"}}>Car Rental Services</span></h1>
+
+        <p>
+          GoTravio provides reliable, comfortable, and premium cab booking and
+          car rental services across India. Whether you need a local daily ride,
+          airport taxi, wedding car, business travel, or outstation journey, our
+          professional drivers and well-maintained vehicles ensure a smooth and
+          safe experience.
+        </p>
+
+        <div className="wrapper">
+          {services.map((service, index) => (
+            <motion.div
+              initial={{ x: service.x, scale: 0 }}
+              whileInView={{ x: 0, scale: 1 }}
+              viewport={{ once: false, amount: 0 }}
+              transition={{ type: "tween", duration: 0.8 }}
+              className="card"
+              key={index}
+            >
+              <div className="left">
+                <img src={service.img} alt={service.title} />
+              </div>
+
+              <div className="right">
+                <h2>{service.title}</h2>
+                <p>{service.desc}</p>
+                <button onClick={() => handleServiceConnect(service.title)}>
+                  <i className="bx bxl-whatsapp"></i>
+                  Connect
+                </button>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 };
 

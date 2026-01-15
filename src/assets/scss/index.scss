@@ -770,10 +770,12 @@ section.feedback {
           }
         }
         .card:hover {
-          background: #fafafa;
+         background: #fff7f7;
+          border-color: #ef3e44;
         }
         .card.active {
-          background: #fafafa;
+          background: #fff7f7;
+          border-color: #ef3e44;
         }
       }
     }
@@ -870,8 +872,9 @@ section.about {
     height: 300px;
     object-fit: cover;
     margin-bottom: 2rem;
+    margin-top: 2rem;
   }
-  h2 {
+  h1 {
     color: #000000;
     font-size: 1.3rem;
     margin-bottom: 10px;
@@ -886,7 +889,7 @@ section.about {
     text-align: justify;
     line-height: 1.2rem;
   }
-  h5 {
+  h2 {
     color: #000000;
     font-weight: 600;
     font-size: 1rem;

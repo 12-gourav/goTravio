@@ -4,59 +4,79 @@ import { Helmet } from "react-helmet";
 const HomepageHelmet = () => {
   return (
     <Helmet>
-      {/* Primary Meta Tags */}
+      {/* ===== PRIMARY SEO TAGS ===== */}
       <title>
-        GoTravio – Reliable Car Rental & Cab Booking Services in India
+        GoTravio – Cab Booking & Car Rental App in India | Airport & Outstation Taxis
       </title>
 
       <meta
         name="description"
-        content="GoTravio provides reliable car rental and cab booking services with professional drivers. Book 4, 5, 6, or 7-seater vehicles for city rides, airport transfers, business travel, and long-distance journeys."
+        content="Book local cabs, airport taxis, and outstation car rentals across India with GoTravio. Safe drivers, affordable pricing, and 24x7 taxi booking."
       />
 
-      <meta
-        name="keywords"
-        content="car rental, cab booking, taxi service, airport transfer, outstation cab, chauffeur service, car hire, GoTravio"
-      />
-
-      <meta name="author" content="GoTravio" />
       <meta name="robots" content="index, follow" />
+      <meta name="author" content="GoTravio" />
 
-      {/* Open Graph / Facebook / WhatsApp */}
+      {/* ===== CANONICAL ===== */}
+      <link rel="canonical" href="https://gotravio.in/" />
+
+      {/* ===== OPEN GRAPH (FB / WHATSAPP / LINKEDIN) ===== */}
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="GoTravio" />
       <meta
         property="og:title"
-        content="GoTravio – Reliable Car Rental & Cab Booking Services"
+        content="GoTravio – Cab Booking & Car Rental Services in India"
       />
       <meta
         property="og:description"
-        content="Book comfortable and affordable car rentals with GoTravio. Choose from 4, 5, 6, or 7-seater vehicles for all travel needs."
+        content="Affordable cab booking and car rental services across India. Book local, airport, and outstation taxis with GoTravio."
       />
+      <meta property="og:url" content="https://gotravio.in/" />
       <meta
         property="og:image"
         content="https://gotravio.in/assets/og-banner.jpg"
       />
-      <meta property="og:url" content="https://gotravio.in/" />
-      <meta property="og:type" content="website" />
 
-      {/* Twitter */}
+      {/* ===== TWITTER CARD ===== */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="twitter:title"
-        content="GoTravio – Reliable Car Rental & Cab Booking"
+        content="GoTravio – Cab Booking App in India"
       />
       <meta
         name="twitter:description"
-        content="Affordable car rental and cab booking services for city, airport, and outstation travel with GoTravio."
+        content="Book safe and affordable cabs for local, airport, and outstation travel with GoTravio."
       />
       <meta
         name="twitter:image"
         content="https://gotravio.in/assets/og-banner.jpg"
       />
 
-      {/* Canonical URL */}
-      <link rel="canonical" href="https://gotravio.in/" />
+      {/* ===== STRUCTURED DATA (VERY IMPORTANT) ===== */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "TaxiService",
+          name: "GoTravio",
+          url: "https://gotravio.in/",
+          logo: "https://gotravio.in/favicon.ico",
+          description:
+            "GoTravio provides cab booking and car rental services across India including local, airport and outstation travel.",
+          areaServed: {
+            "@type": "Country",
+            name: "India",
+          },
+          serviceType: [
+            "Cab Booking",
+            "Taxi Service",
+            "Airport Taxi",
+            "Outstation Cab",
+            "Car Rental",
+          ],
+        })}
+      </script>
 
-      {/* Favicon */}
+      {/* ===== FAVICON ===== */}
       <link rel="icon" href="/favicon.ico" />
     </Helmet>
   );

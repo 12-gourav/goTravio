@@ -1,10 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Main Pages -->
-  <url><loc>https://gotravio.in/</loc><priority>1.0</priority></url>
+  <!-- ================= HOME ================= -->
+  <url>
+    <loc>https://gotravio.in/</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
 
+  <!-- ================= STATIC PAGES ================= -->
+  <url>
+    <loc>https://gotravio.in/about</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
+  <!-- ================= CORE SERVICE PAGES ================= -->
+  <url>
+    <loc>https://gotravio.in/cab-booking-in-india</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 
+  <!-- ================= HIGH PRIORITY CITY PAGES ================= -->
+
+  <!-- 🔥 Jamshedpur (TOP FOCUS) -->
+  <url>
+    <loc>https://gotravio.in/cab-booking-in-jamshedpur</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://gotravio.in/airport-taxi-in-jamshedpur</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://gotravio.in/outstation-cab-in-jamshedpur</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 🔥 Patna (TOP FOCUS) -->
+  <url>
+    <loc>https://gotravio.in/cab-booking-in-patna</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://gotravio.in/airport-taxi-in-patna</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://gotravio.in/outstation-cab-in-patna</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 🔥 Bihar (STATE-LEVEL TARGET) -->
+  <url>
+    <loc>https://gotravio.in/cab-booking-in-bihar</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- ================= OTHER IMPORTANT CITIES ================= -->
+  <url>
+    <loc>https://gotravio.in/cab-booking-in-pune</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://gotravio.in/cab-booking-in-delhi</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://gotravio.in/cab-booking-in-mumbai</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://gotravio.in/cab-booking-in-bangalore</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
 
 </urlset>
